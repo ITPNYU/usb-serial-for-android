@@ -1,0 +1,54 @@
+name: Feature scenario
+description: A step by step explanation for a proposed feature, including preconditions for context. 
+title: As an  <Actor> ...
+body:
+- type: markdown
+  attributes:
+    value: "# Scenario"
+- type: input
+  id: context_1
+  attributes:
+    description: "provide the precondition or context required in order to execute the action"
+    label: "Given"
+    placeholder: "the User has logged in"
+  validations:
+    required: true
+    
+- type: input
+  id: context_2
+  attributes:
+    description: "optional: additional preconditions provided here"
+    label: "AND"
+    placeholder: "they have navigated to the settings page"
+  validations:
+    required: false
+    
+- type: input
+  id: trigger
+  attributes:
+    description: "the action taken"
+    label: "WHEN"
+    placeholder: "they enter the updated email address into the provided field"
+  validations:
+    required:  true 
+- type: input
+  id: secondary_action_response
+  attributes:
+    description: "an interim response to the triggering action"
+    label: "AND"
+    placeholder: "the user successfully logs in again  (confirmation authorization)"
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: "# Desired Outcome"
+- type: input
+  id: expected_action
+  attributes:
+    description: "expected result of the Action taken"
+    label: "THEN"
+    placeholder: "the email key is updated in the User's account" 
+  validations:
+    required: true
+    
+   
